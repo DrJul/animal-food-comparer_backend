@@ -2,20 +2,32 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<packaging>pom</packaging>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.2.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.pl</groupId>
-	<artifactId>animal-food-comparer_be</artifactId>
+	<artifactId>animal-food-comparer_be-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>animal-food-comparer_be</name>
 	<description>Animal food composition comparer</description>
+
+	<modules>
+		<module>animal-food-comparer_be-api</module>
+		<module>animal-food-comparer_be</module>
+	</modules>
+
 	<properties>
 		<java.version>17</java.version>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -40,10 +52,23 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+<!--			<plugin>-->
+<!--				<groupId>org.springframework.boot</groupId>-->
+<!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--				<version>3.2.2</version>-->
+<!--&lt;!&ndash;				<configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;					<mainClass>animal-food-comparer_backend\animal-food-comparer_be</mainClass>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;					<mainClass>src.main.java.com.pl.AnimalFoodComparer</mainClass>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;					<mainClass>animal-food-comparer_be.src.main.java.com.pl.AnimalFoodComparer</mainClass>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;				</configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;				<executions>&ndash;&gt;-->
+<!--&lt;!&ndash;					<execution>&ndash;&gt;-->
+<!--&lt;!&ndash;						<goals>&ndash;&gt;-->
+<!--&lt;!&ndash;							<goal>repackage</goal>&ndash;&gt;-->
+<!--&lt;!&ndash;						</goals>&ndash;&gt;-->
+<!--&lt;!&ndash;					</execution>&ndash;&gt;-->
+<!--&lt;!&ndash;				</executions>&ndash;&gt;-->
+<!--			</plugin>-->
 		</plugins>
 	</build>
 
