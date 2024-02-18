@@ -58,14 +58,27 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
+        <dependency>
+            <groupId>net.karneim</groupId>
+            <artifactId>pojobuilder</artifactId>
+            <version>4.3.0</version>
+            <!-- 'provided' scope because this is only needed during compilation -->
+            <scope>provided</scope>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.projectlombok</groupId>-->
+<!--            <artifactId>lombok</artifactId>-->
+<!--            <version>1.18.30</version>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
+
     </dependencies>
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.openapitools</groupId>
-                <artifactId>
-                    openapi-generator-maven-plugin</artifactId>
+                <artifactId>openapi-generator-maven-plugin</artifactId>
                 <version>7.2.0</version>
                 <executions>
                     <execution>
@@ -75,12 +88,18 @@
                         <configuration>
                             <inputSpec>${project.basedir}/src/main/resources/animal-food-comparer_be-api.yaml</inputSpec>
                             <generatorName>spring</generatorName>
-                            <modelNameSuffix>Dto</modelNameSuffix>
+                            <modelNameSuffix>To</modelNameSuffix>
+                            <invokerPackage></invokerPackage>
+                            <apiPackage></apiPackage>
+                            <modelPackage></modelPackage>
                             <configOptions>
+                                <useTags>true</useTags>
                                 <sourceFolder>src/gen/java/resources</sourceFolder>
                                 <library>spring-boot</library>
                                 <interfaceOnly>true</interfaceOnly>
                                 <skipDefaultInterface>true</skipDefaultInterface>
+                                <additionalModelTypeAnnotations>@builder.To</additionalModelTypeAnnotations>
+<!--                                <additionalModelTypeAnnotations>@lombok.Builder @lombok.NoArgsConstructor @lombok.AllArgsConstructor</additionalModelTypeAnnotations>-->
                             </configOptions>
                         </configuration>
                     </execution>
