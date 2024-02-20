@@ -65,13 +65,6 @@
             <!-- 'provided' scope because this is only needed during compilation -->
             <scope>provided</scope>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.projectlombok</groupId>-->
-<!--            <artifactId>lombok</artifactId>-->
-<!--            <version>1.18.30</version>-->
-<!--            <scope>provided</scope>-->
-<!--        </dependency>-->
-
     </dependencies>
 
     <build>
@@ -89,7 +82,7 @@
                             <inputSpec>${project.basedir}/src/main/resources/animal-food-comparer_be-api.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <modelNameSuffix>To</modelNameSuffix>
-                            <invokerPackage></invokerPackage>
+                            <invokerPackage>animal-food-comparer_be.src.main.java.com.pl</invokerPackage>
                             <apiPackage></apiPackage>
                             <modelPackage></modelPackage>
                             <configOptions>
@@ -98,8 +91,7 @@
                                 <library>spring-boot</library>
                                 <interfaceOnly>true</interfaceOnly>
                                 <skipDefaultInterface>true</skipDefaultInterface>
-                                <additionalModelTypeAnnotations>@builder.To</additionalModelTypeAnnotations>
-<!--                                <additionalModelTypeAnnotations>@lombok.Builder @lombok.NoArgsConstructor @lombok.AllArgsConstructor</additionalModelTypeAnnotations>-->
+                                <additionalModelTypeAnnotations>@builder.Buildable</additionalModelTypeAnnotations>
                             </configOptions>
                         </configuration>
                     </execution>
