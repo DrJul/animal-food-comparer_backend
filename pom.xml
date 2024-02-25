@@ -12,14 +12,14 @@
 	</parent>
 
 	<groupId>com.pl</groupId>
-	<artifactId>animal-food-comparer_be-parent</artifactId>
+	<artifactId>food-comparer_be-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>animal-food-comparer_be</name>
+	<name>food-comparer_be</name>
 	<description>Animal food composition comparer</description>
 
 	<modules>
-		<module>animal-food-comparer_be-api</module>
-		<module>animal-food-comparer_be</module>
+		<module>food-comparer_be-api</module>
+		<module>food-comparer_be</module>
 	</modules>
 
 	<properties>
@@ -58,8 +58,8 @@
 <!--				<version>3.2.2</version>-->
 <!--&lt;!&ndash;				<configuration>&ndash;&gt;-->
 <!--&lt;!&ndash;&lt;!&ndash;					<mainClass>animal-food-comparer_backend\animal-food-comparer_be</mainClass>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;					<mainClass>src.main.java.com.pl.AnimalFoodComparer</mainClass>&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;					<mainClass>animal-food-comparer_be.src.main.java.com.pl.AnimalFoodComparer</mainClass>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;					<mainClass>src.main.java.com.pl.FoodComparer</mainClass>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;					<mainClass>animal-food-comparer_be.src.main.java.com.pl.FoodComparer</mainClass>&ndash;&gt;&ndash;&gt;-->
 <!--&lt;!&ndash;				</configuration>&ndash;&gt;-->
 <!--&lt;!&ndash;				<executions>&ndash;&gt;-->
 <!--&lt;!&ndash;					<execution>&ndash;&gt;-->
