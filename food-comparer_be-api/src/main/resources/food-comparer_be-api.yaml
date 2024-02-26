@@ -1,11 +1,43 @@
 openapi: "3.0.0"
 info:
-  title: Title
-  description: Desc
+  title: FoodComparerApi
+  description: Api generator file
   version: 1.0
 servers:
   - url: http://petstore.swagger.io/v1
 paths:
+  /test:
+    get:
+      summary: Get Testing Object
+      description: Verbose description
+      operationId: getTestData
+#      api name by tag
+      tags:
+        - foodComparerTest
+      responses:
+        '200':
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TestObject"
+    post:
+      summary: Post data for Testing Object
+      tags:
+        - foodComparerTest
+      parameters:
+        - name: someData
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: string
+
   /pets:
     get:
       summary: List all pets
@@ -79,6 +111,10 @@ paths:
                 $ref: "#/components/schemas/Error"
 components:
   schemas:
+    TestObject:
+      properties:
+        message:
+          type: string
     Pet:
       required:
         - id
